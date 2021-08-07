@@ -5,6 +5,32 @@
             "name": "CommercialModel API",
             "type": "coreclr",
             "request": "launch",
+            "preLaunchTask": "",
+            "program": "${workspaceFolder}/CommercialModelApi/bin/Debug/net5.0/CommercialModelApi.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/CommercialModelApi",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https://\\S+)",
+                "uriFormat": "%s/swagger"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            },
+            "presentation": {
+                "hidden": true,
+                "group": "",
+                "order": 2
+            }
+        },
+        {
+            "name": "API Only",
+            "type": "coreclr",
+            "request": "launch",
             "preLaunchTask": "build-api",
             "program": "${workspaceFolder}/CommercialModelApi/bin/Debug/net5.0/CommercialModelApi.dll",
             "args": [],
@@ -20,32 +46,54 @@
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
+            },
+            "presentation": {
+                "hidden": false,
+                "group": "",
+                "order": 4
             }
         },
         {
-            "name": "Commercial Model CLI - list accounts",
+            "name": "CommercialModel CLI - list accounts",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build-cli",
+            "preLaunchTask": "",
             "program": "${workspaceFolder}/CommercialModelCli/bin/Debug/net5.0/CommercialModelCli.dll",
             "args": ["list-accounts"],
             "cwd": "${workspaceFolder}/CommercialModelCli",
             "stopAtEntry": true,
             "console": "internalConsole",
+            "presentation": {
+                "hidden": true,
+                "group": "",
+                "order": 3
+            }
         },
         {
             "name": ".NET Core Attach",
             "type": "coreclr",
-            "request": "attach"
+            "request": "attach",
+            "presentation": {
+                "hidden": false,
+                "group": "",
+                "order": 5
+            }
         }
     ],
     "compounds": [
         {
-            "name": "Console & API",
+            "name": "Cli & API",
             "configurations": [
                 "CommercialModel API",
-                "Commercial Model CLI - list accounts"
-            ]
+                "CommercialModel CLI - list accounts"
+            ],
+            "preLaunchTask": "build",
+            "stopAll": true,
+            "presentation": {
+                "hidden": false,
+                "group": "",
+                "order": 1
+            },
         }
     ]
 }
