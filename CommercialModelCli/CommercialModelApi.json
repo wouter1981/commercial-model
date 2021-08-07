@@ -1,0 +1,61 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "CommercialModelApi",
+    "version": "v1"
+  },
+  "paths": {
+    "/AccountManagement": {
+      "get": {
+        "tags": [
+          "AccountManagement"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Account"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Account"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Account"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Account": {
+        "type": "object",
+        "properties": {
+          "accountShortName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

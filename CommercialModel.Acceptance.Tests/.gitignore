@@ -1,0 +1,4 @@
+*.feature.cs
+TestResults/
+bin/
+obj/

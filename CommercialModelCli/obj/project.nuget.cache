@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "jPa1RIhRO1EU0ij1CcUymjN+a19tS2XljHg5LSp4G/xlLNVXqqC4AB1c5TdhUqWXTZVJsV3P5LqS1PFdwCGvVg==",
+  "success": true,
+  "projectFilePath": "/home/wsimons/projects/commercial-model/CommercialModelCli/CommercialModelCli.csproj",
+  "expectedPackageFiles": [
+    "/home/wsimons/.nuget/packages/microsoft.extensions.apidescription.client/0.3.0-preview7.19365.7/microsoft.extensions.apidescription.client.0.3.0-preview7.19365.7.nupkg.sha512",
+    "/home/wsimons/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
+    "/home/wsimons/.nuget/packages/nswag.apidescription.client/13.0.5/nswag.apidescription.client.13.0.5.nupkg.sha512",
+    "/home/wsimons/.nuget/packages/nswag.msbuild/13.0.5/nswag.msbuild.13.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
