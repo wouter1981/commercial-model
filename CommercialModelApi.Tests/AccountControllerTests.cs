@@ -17,7 +17,7 @@ namespace CommercialModelApi.Tests
         {
             _logger = new Mock<ILogger<AccountsController>>();
         }
-        
+
         [Fact]
         public void ListAccounts()
         {
@@ -38,9 +38,23 @@ namespace CommercialModelApi.Tests
         {
             var accountRepository = new Mock<IAccountRepository>();
             var controller = new AccountsController(_logger.Object, accountRepository.Object);
-            controller.AddAccount("test-account");
+            var result = controller.AddAccount("test-account");
             // No exception is good
-            Assert.True(true);
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void AddAccountThatExists()
+        {
+            var accountRepository = new Mock<IAccountRepository>();
+            accountRepository
+                .SetupSequence(x => x.AddAccount("test-account"))
+                .Pass()
+                .Throws(new Exception("Account already exists"));
+            var controller = new AccountsController(_logger.Object, accountRepository.Object);
+            var result = controller.AddAccount("test-account");
+            result = controller.AddAccount("test-account");
+            Assert.False(result);
         }
 
         [Fact]
@@ -57,9 +71,20 @@ namespace CommercialModelApi.Tests
         {
             var accountRepository = new Mock<IAccountRepository>();
             var controller = new AccountsController(_logger.Object, accountRepository.Object);
-            controller.DeleteAllAccounts();
+            var result = controller.DeleteAllAccounts();
             // No exception is good
-            Assert.True(true);
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void DeleteAllAccountsFails()
+        {
+            var accountRepository = new Mock<IAccountRepository>();
+            accountRepository.Setup(x => x.DeleteAllAccounts()).Throws(new Exception("Something is wrong"));
+            var controller = new AccountsController(_logger.Object, accountRepository.Object);
+            var result = controller.DeleteAllAccounts();
+            // No exception is good
+            Assert.False(result);
         }
     }
 }

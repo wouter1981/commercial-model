@@ -56,17 +56,55 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "watch",
+            "label": "watch-api",
             "command": "dotnet",
             "type": "process",
+            "options": {
+                "env": {
+                    "ASPNETCORE_ENVIRONMENT": "Development"
+                }
+            },
             "args": [
                 "watch",
-                "run",
+                "-p",
                 "${workspaceFolder}/CommercialModelApi/CommercialModelApi.csproj",
+                "run",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
-        }
+        },
+        {
+            "label": "watch-api-unit-tests",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "-p",
+                "${workspaceFolder}/CommercialModelApi.Tests/CommercialModelApi.Tests.csproj",
+                "test",
+                "/p:CollectCoverage=true",
+                "/p:CoverletOutputFormat=lcov",
+                "/p:CoverletOutput=${workspaceFolder}/coverage/api/coverage.info",
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "test",
+                "isDefault": true,
+            },
+        },
+        {
+            "label": "watch-acceptance-tests",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "-p",
+                "${workspaceFolder}/CommercialModel.Acceptance.Tests/CommercialModel.Acceptance.Tests.csproj",
+                "test",
+            ],
+            "problemMatcher": "$msCompile",
+            "group": "test",
+        },
     ]
 }

@@ -60,3 +60,17 @@ dotnet new <projecttype> -o <projectname>
 # Add the project to the solution
 dotnet sln add <projectname>
 ```
+
+# Keep tests continuously running in VSCode
+You can use the task watch-api-unit-tests to continuously run unit tests.
+
+[ctrl-shift-p] > Tasks: Run Test Task
+
+You can also continuously run acceptance tests, but these require the API to be running. See below on running API continuously.
+
+[ctrl-shift-p] > Tasks: Run Task > watch-acceptance-tests
+
+# Restart webservice automatically and keep running in VSCode
+Use the task watch-api to keep the webserver continuously running. This helps with acceptance testing.
+
+[ctrl-shift-p] > Tasks: Run Task > watch-api

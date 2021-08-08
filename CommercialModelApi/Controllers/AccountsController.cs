@@ -48,9 +48,11 @@ namespace CommercialModelApi.Controllers
             {
                 _accountRepository.AddAccount(accountName);
                 return true;
-            } catch {
+            }
+            catch
+            {
                 return false;
-            } 
+            }
         }
 
         /// <summary>
@@ -61,10 +63,13 @@ namespace CommercialModelApi.Controllers
         public bool DeleteAllAccounts()
         {
             _logger.LogDebug("Delete all accounts");
-            try {
+            try
+            {
                 _accountRepository.DeleteAllAccounts();
                 return true;
-            } catch {
+            }
+            catch
+            {
                 return false;
             }
         }
@@ -77,7 +82,8 @@ namespace CommercialModelApi.Controllers
         [HttpGet("{accountName}")]
         public Account GetAccount(string accountName)
         {
-            return new Account {
+            return new Account
+            {
                 AccountShortName = "test"
             };
         }
