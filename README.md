@@ -4,7 +4,7 @@ This project contains run and launch configurations for VSCode and has been buil
 - .NET Core Test Explorer
 - Snippets and Syntax Highlight for Gherkin (Cucumber)
 
-# Installing tools
+# Installing specflow templates
 https://docs.specflow.org/projects/specflow/en/latest/Installation/Installation.html
 
 Check out the recommended plugins and .NET templates.
@@ -15,6 +15,7 @@ dotnet new -i SpecFlow.Templates.DotNet
 # add feature
 dotnet new specflow-feature
 ```
+
 # Setup Dev Cert
 To make it work in WSL you need linux to trust the dev certificate, that's a bit of work :-)
 
@@ -48,3 +49,14 @@ Run acceptance:
 If you update the API, you need to copy the updated spec (downloadable via SwaggerUI after starting the API project) to the `CommercialModelCli/CommercialModelApi.json` file. 
 
 The project file has a reference that will automatically update the library code on every build. So after updating the file make sure to run a build before updating the code.
+
+# Adding a project to the solution
+This project is setup as a .NET core project with solution. To add a project you can do:
+
+```
+# Add the project
+dotnet new <projecttype> -o <projectname>
+
+# Add the project to the solution
+dotnet sln add <projectname>
+```
