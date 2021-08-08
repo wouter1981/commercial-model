@@ -7,17 +7,18 @@ namespace CommercialModelApi.Data
 {
     internal class FileBasedAccountRepository : IAccountRepository
     {
-        private readonly static string _baseFolder = 
+        private readonly static string _baseFolder =
                 Path.Combine(
                     Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
                     "CommercialModel");
-        
+
         public IEnumerable<Account> ListAccounts()
         {
             var accountFiles = Directory.GetFiles(_baseFolder);
             foreach (var accountFile in accountFiles)
             {
-                yield return new Account {
+                yield return new Account
+                {
                     AccountShortName = Path.GetFileNameWithoutExtension(accountFile),
                 };
             }
@@ -26,8 +27,9 @@ namespace CommercialModelApi.Data
         public void AddAccount(string accountName)
         {
             var accountFile = Path.Combine(_baseFolder, accountName);
-            if (File.Exists(accountFile)) {
-                throw new Exception("Account already exists");
+            if (File.Exists(accountFile))
+            {
+                throw new Exception("Account already exists!");
             }
             File.Create(accountFile);
         }
