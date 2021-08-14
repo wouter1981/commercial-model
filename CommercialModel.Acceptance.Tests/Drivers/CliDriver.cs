@@ -2,31 +2,73 @@ using System;
 using System.Diagnostics;
 using System.Text;
 using System.Collections.Generic;
+using System.Reflection;
+using System.IO;
 
 namespace CommercialModel.Acceptance.Tests.Drivers
 {
     public class CliDriver
     {
-        public (int, string) AddAccount(string accountName) {
-            ProcessStartInfo startInfo = new ProcessStartInfo() { 
-                FileName = "/usr/bin/dotnet", 
-                Arguments = $"run --project /home/wsimons/projects/commercial-model/CommercialModelCli/CommercialModelCli.csproj add-account {accountName}",
+        private static readonly string _commercialCliPath;
+
+        static CliDriver()
+        {
+            var assemblyPath = Assembly.GetExecutingAssembly().Location;
+            var commercialCliProjectPath = Path.Combine(
+                Path.GetDirectoryName(assemblyPath),
+                "../../../../CommercialModelCli/CommercialModelCli.csproj");
+
+            ProcessStartInfo startInfo = new ProcessStartInfo()
+            {
+                FileName = "/usr/bin/dotnet",
+                Arguments = $"build {commercialCliProjectPath}",
+                RedirectStandardOutput = true,
                 RedirectStandardError = true,
-            }; 
-            var process = Process.Start(startInfo);
-            while (!process.HasExited) {
-                // wait
+            };
+            using (var process = Process.Start(startInfo))
+            {
+                while (!process.HasExited)
+                {
+                }
+                if (process.ExitCode != 0)
+                {
+                    throw new Exception(process.StandardError.ReadToEnd());
+                }
             }
-            if (process.ExitCode != 0) {
-                return(process.ExitCode, process.StandardError.ReadToEnd());
-            }
-            return (0, "");
+
+            _commercialCliPath = Path.Combine(
+                Path.GetDirectoryName(assemblyPath),
+                "../../../../CommercialModelCli/bin/Debug/net5.0/CommercialModelCli");
         }
 
-        public IEnumerable<string> ListAccounts() {
-            ProcessStartInfo startInfo = new ProcessStartInfo() { 
-                FileName = "/usr/bin/dotnet", 
-                Arguments = $"run --project /home/wsimons/projects/commercial-model/CommercialModelCli/CommercialModelCli.csproj list-accounts",
+        public (int, string) AddAccount(string accountName)
+        {
+            return Execute($"add-account {accountName}");
+        }
+
+        public IEnumerable<string> ListAccounts()
+        {
+            (int exitCode, string output) = Execute("list-accounts");
+            if (exitCode == 0)
+                return output.Split("\n");
+            else
+                throw new Exception("Error while executing command: " + output);
+        }
+
+        public void CleanModel()
+        {
+            (var exitCode, var output) = Execute("clean-model");
+            if (exitCode != 0)
+            {
+                throw new Exception("Error executing command: " + output);
+            }
+        }
+        private static (int, string) Execute(string args)
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo()
+            {
+                FileName = _commercialCliPath,
+                Arguments = args,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
             };
@@ -37,30 +79,16 @@ namespace CommercialModel.Acceptance.Tests.Drivers
                 {
                     standardOutput.Append(process.StandardOutput.ReadToEnd());
                 }
-                if (process.ExitCode != 0) {
-                    throw new Exception("Error executing command: " + process.StandardError.ReadToEnd());
+                if (process.ExitCode != 0)
+                {
+                    return (process.ExitCode, process.StandardError.ReadToEnd());
                 }
                 standardOutput.Append(process.StandardOutput.ReadToEnd());
 
                 var captured = standardOutput.ToString();
-                return captured.Split("\n");
+                return (0, captured);
             }
-        }
 
-        public void CleanModel() {
-            ProcessStartInfo startInfo = new ProcessStartInfo() { 
-                FileName = "/usr/bin/dotnet", 
-                Arguments = $"run --project /home/wsimons/projects/commercial-model/CommercialModelCli/CommercialModelCli.csproj clean-model",
-                RedirectStandardError = true,
-            }; 
-            var process = Process.Start(startInfo);
-            while (!process.HasExited) {
-                // wait
-            }
-            if (process.ExitCode != 0) {
-                throw new Exception("Error executing command: " + process.StandardError.ReadToEnd());
-            }
         }
-
     }
 }
