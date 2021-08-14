@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using CommercialModelApi.Model;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CommercialModelApi.Tests
 {
@@ -39,8 +40,10 @@ namespace CommercialModelApi.Tests
             var accountRepository = new Mock<IAccountRepository>();
             var controller = new AccountsController(_logger.Object, accountRepository.Object);
             var result = controller.AddAccount("test-account");
-            // No exception is good
-            Assert.True(result);
+            Assert.True(result.Result is CreatedAtActionResult);
+
+            var expectedResult = (CreatedAtActionResult)result.Result;
+            Assert.Equal("test-account", ((Account)expectedResult.Value).AccountShortName);
         }
 
         [Fact]
@@ -48,13 +51,16 @@ namespace CommercialModelApi.Tests
         {
             var accountRepository = new Mock<IAccountRepository>();
             accountRepository
-                .SetupSequence(x => x.AddAccount("test-account"))
+                .SetupSequence(x => x.AddAccount(It.Is<Account>(y => y.AccountShortName == "test-account")))
                 .Pass()
                 .Throws(new Exception("Account already exists"));
             var controller = new AccountsController(_logger.Object, accountRepository.Object);
             var result = controller.AddAccount("test-account");
             result = controller.AddAccount("test-account");
-            Assert.False(result);
+            Assert.True(result.Result is BadRequestObjectResult);
+            var badRequestResult = (BadRequestObjectResult)result.Result;
+            var problemDetails = (ProblemDetails)badRequestResult.Value;
+            Assert.Equal(problemDetails.Detail, "Account already exists");
         }
 
         [Fact]

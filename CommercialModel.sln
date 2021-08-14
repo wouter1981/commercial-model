@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommercialModelCli", "Comme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommercialModelApi.Tests", "CommercialModelApi.Tests\CommercialModelApi.Tests.csproj", "{77F2F0A2-3483-414C-9656-3C6E91473AB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommercialModelCli.Pact", "CommercialModelCli.Pact\CommercialModelCli.Pact.csproj", "{0C7F9613-80E3-405B-B1C9-67556EF96850}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{77F2F0A2-3483-414C-9656-3C6E91473AB4}.Release|x64.Build.0 = Release|Any CPU
 		{77F2F0A2-3483-414C-9656-3C6E91473AB4}.Release|x86.ActiveCfg = Release|Any CPU
 		{77F2F0A2-3483-414C-9656-3C6E91473AB4}.Release|x86.Build.0 = Release|Any CPU
+		{0C7F9613-80E3-405B-B1C9-67556EF96850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C7F9613-80E3-405B-B1C9-67556EF96850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C7F9613-80E3-405B-B1C9-67556EF96850}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0C7F9613-80E3-405B-B1C9-67556EF96850}.Debug|x64.Build.0 = Debug|Any CPU
+		{0C7F9613-80E3-405B-B1C9-67556EF96850}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0C7F9613-80E3-405B-B1C9-67556EF96850}.Debug|x86.Build.0 = Debug|Any CPU
+		{0C7F9613-80E3-405B-B1C9-67556EF96850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C7F9613-80E3-405B-B1C9-67556EF96850}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C7F9613-80E3-405B-B1C9-67556EF96850}.Release|x64.ActiveCfg = Release|Any CPU
+		{0C7F9613-80E3-405B-B1C9-67556EF96850}.Release|x64.Build.0 = Release|Any CPU
+		{0C7F9613-80E3-405B-B1C9-67556EF96850}.Release|x86.ActiveCfg = Release|Any CPU
+		{0C7F9613-80E3-405B-B1C9-67556EF96850}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

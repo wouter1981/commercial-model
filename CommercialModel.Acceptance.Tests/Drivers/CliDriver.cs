@@ -43,12 +43,12 @@ namespace CommercialModel.Acceptance.Tests.Drivers
 
         public (int, string) AddAccount(string accountName)
         {
-            return Execute($"add-account {accountName}");
+            return Execute($"accounts add {accountName}");
         }
 
         public IEnumerable<string> ListAccounts()
         {
-            (int exitCode, string output) = Execute("list-accounts");
+            (int exitCode, string output) = Execute("accounts list");
             if (exitCode == 0)
                 return output.Split("\n");
             else
@@ -57,7 +57,7 @@ namespace CommercialModel.Acceptance.Tests.Drivers
 
         public void CleanModel()
         {
-            (var exitCode, var output) = Execute("clean-model");
+            (var exitCode, var output) = Execute("accounts delete-all");
             if (exitCode != 0)
             {
                 throw new Exception("Error executing command: " + output);

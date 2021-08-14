@@ -24,9 +24,9 @@ namespace CommercialModelApi.Data
             }
         }
 
-        public void AddAccount(string accountName)
+        public void AddAccount(Account account)
         {
-            var accountFile = Path.Combine(_baseFolder, accountName);
+            var accountFile = Path.Combine(_baseFolder, account.AccountShortName);
             if (File.Exists(accountFile))
             {
                 throw new Exception("Account already exists!");

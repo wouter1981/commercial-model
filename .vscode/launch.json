@@ -57,9 +57,12 @@
             "name": "CommercialModel CLI - list accounts",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "",
+            "preLaunchTask": "build-cli",
             "program": "${workspaceFolder}/CommercialModelCli/bin/Debug/net5.0/CommercialModelCli.dll",
-            "args": ["list-accounts"],
+            "args": [
+                "accounts",
+                "list"
+            ],
             "cwd": "${workspaceFolder}/CommercialModelCli",
             "stopAtEntry": true,
             "console": "internalConsole",
@@ -67,6 +70,26 @@
                 "hidden": true,
                 "group": "",
                 "order": 3
+            }
+        },
+        {
+            "name": "CLI - Add Test",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-cli",
+            "program": "${workspaceFolder}/CommercialModelCli/bin/Debug/net5.0/CommercialModelCli.dll",
+            "args": [
+                "accounts",
+                "add",
+                "test",
+            ],
+            "cwd": "${workspaceFolder}/CommercialModelCli",
+            "stopAtEntry": true,
+            "console": "internalConsole",
+            "presentation": {
+                "hidden": false,
+                "group": "",
+                "order": 6
             }
         },
         {
@@ -85,7 +108,7 @@
             "name": "Cli & API",
             "configurations": [
                 "CommercialModel API",
-                "CommercialModel CLI - list accounts"
+                "CLI - Add Test"
             ],
             "preLaunchTask": "build",
             "stopAll": true,

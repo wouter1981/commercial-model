@@ -1,0 +1,9 @@
+/home/runner/.rubies/ruby-2.2.10/bin/ruby -r ./siteconf20201011-2848-1aumn3.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+make "DESTDIR=" install

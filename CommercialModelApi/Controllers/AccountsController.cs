@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CommercialModelApi.Model;
 using CommercialModelApi.Data;
+using Microsoft.AspNetCore.Http;
 
 namespace CommercialModelApi.Controllers
 {
@@ -39,19 +40,27 @@ namespace CommercialModelApi.Controllers
         /// Add an account
         /// </summary>
         /// <param name="accountName">The account name to add</param>
-        /// <returns>Success or failure</returns>
-        [HttpPut]
-        public bool AddAccount(string accountName)
+        /// <returns>Link to newly created record</returns>
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public ActionResult<Account> AddAccount(string accountName)
         {
             _logger.LogDebug("Add account called with {accountName}", accountName);
             try
             {
-                _accountRepository.AddAccount(accountName);
-                return true;
+                var account = new Account { AccountShortName = accountName };
+                _accountRepository.AddAccount(account);
+                return CreatedAtAction(nameof(GetAccount), new { accountName = account.AccountShortName }, account);
             }
-            catch
+            catch (Exception err)
             {
-                return false;
+                return BadRequest(new ProblemDetails
+                {
+                    Title = "Error while creating account",
+                    Detail = err.Message,
+                    Status = StatusCodes.Status400BadRequest
+                });
             }
         }
 
