@@ -4,6 +4,7 @@ using PactNet.Matchers;
 using PactNet.Mocks.MockHttpService;
 using PactNet.Mocks.MockHttpService.Models;
 using System.Collections.Generic;
+using System.IO;
 
 namespace CommercialModelCli.Pact
 {
@@ -20,7 +21,7 @@ namespace CommercialModelCli.Pact
         }
 
         [Fact]
-        public void CanAddAccount()
+        public async void CanAddAccount()
         {
             _mockProviderService
                .Given("The account 'test' does not exist")
@@ -29,16 +30,23 @@ namespace CommercialModelCli.Pact
                    new ProviderServiceRequest
                    {
                        Method = HttpVerb.Post,
-                       Path = "/accounts/",
+                       Path = "/Accounts",
                        Query = new
                        {
                            accountName = "test"
-                       }
+                       },
+                       Headers = new Dictionary<string, object>
+                        {
+                            { "Accept", "text/plain" }
+                        }
                    }
                )
                .WillRespondWith(
                    new ProviderServiceResponse
                    {
+                       Headers = new Dictionary<string, object> {
+                            { "Content-Type", "text/plain; charset=utf-8" }
+                        },
                        Status = 201,
                        Body = new
                        {
@@ -46,6 +54,25 @@ namespace CommercialModelCli.Pact
                        }
                    }
                );
+
+            var output = new StringWriter();
+            var error = new StringWriter();
+            var orgOutput = Console.Out;
+            var orgError = Console.Error;
+            Console.SetOut(output);
+            Console.SetError(error);
+            try
+            {
+                await CommercialModelCli.Program.Main(new[] { "accounts", "add", "test", "--base-url", _mockProviderServiceBaseUri });
+                var capturedOutput = output.ToString();
+                Assert.Equal("Account added: test\n", capturedOutput);
+                _mockProviderService.VerifyInteractions(); // Verify actions as defined in the mock were called once
+            }
+            finally
+            {
+                Console.SetOut(orgOutput);
+                Console.SetError(orgError);
+            }
         }
     }
 }

@@ -1,0 +1,570 @@
+SF:/home/wsimons/projects/commercial-model/CommercialModelCli/Client.cs
+FN:14,System.Void CommercialModelCli.Client::.ctor(System.String)
+FNDA:1,System.Void CommercialModelCli.Client::.ctor(System.String)
+DA:15,1
+DA:16,1
+DA:17,1
+DA:18,1
+FN:20,System.Void CommercialModelCli.Client/<ListAccounts>d__2::MoveNext()
+FNDA:0,System.Void CommercialModelCli.Client/<ListAccounts>d__2::MoveNext()
+DA:21,0
+DA:22,0
+DA:23,0
+FN:25,System.Void CommercialModelCli.Client/<DeleteAllAccounts>d__3::MoveNext()
+FNDA:0,System.Void CommercialModelCli.Client/<DeleteAllAccounts>d__3::MoveNext()
+DA:26,0
+DA:27,0
+DA:28,0
+FN:30,System.Void CommercialModelCli.Client/<AddAccount>d__4::MoveNext()
+FNDA:1,System.Void CommercialModelCli.Client/<AddAccount>d__4::MoveNext()
+DA:31,1
+DA:32,1
+DA:33,1
+LF:13
+LH:7
+BRF:0
+BRH:0
+FNF:4
+FNH:2
+end_of_record
+SF:/home/wsimons/projects/commercial-model/CommercialModelCli/Program.cs
+FN:14,System.Object CommercialModelCli.Program/<>c::<Main>b__0_0()
+FNDA:1,System.Object CommercialModelCli.Program/<>c::<Main>b__0_0()
+DA:15,1
+FN:11,System.Void CommercialModelCli.Program/<Main>d__0::MoveNext()
+FNDA:1,System.Void CommercialModelCli.Program/<Main>d__0::MoveNext()
+DA:12,1
+DA:13,1
+DA:14,1
+DA:16,1
+DA:17,1
+DA:18,1
+DA:19,1
+DA:20,1
+DA:21,1
+DA:23,1
+DA:24,1
+DA:25,1
+DA:27,1
+DA:28,1
+DA:29,1
+DA:30,1
+DA:32,1
+DA:33,1
+FN:35,System.Void CommercialModelCli.Program/<ListAccounts>d__1::MoveNext()
+FNDA:0,System.Void CommercialModelCli.Program/<ListAccounts>d__1::MoveNext()
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+BRDA:39,231,1,0
+BRDA:39,231,0,0
+FN:46,System.Void CommercialModelCli.Program/<DeleteAllAccounts>d__2::MoveNext()
+FNDA:0,System.Void CommercialModelCli.Program/<DeleteAllAccounts>d__2::MoveNext()
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:60,0
+BRDA:50,160,0,0
+BRDA:50,160,1,0
+FN:62,System.Void CommercialModelCli.Program/<AddAccount>d__3::MoveNext()
+FNDA:1,System.Void CommercialModelCli.Program/<AddAccount>d__3::MoveNext()
+DA:63,1
+DA:64,1
+DA:66,1
+DA:67,1
+DA:68,1
+DA:69,1
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:76,1
+LF:50
+LH:26
+BRF:4
+BRH:0
+FNF:5
+FNH:3
+end_of_record
+SF:/home/wsimons/projects/commercial-model/CommercialModelCli/obj/CommercialModelApiClient.cs
+FN:35,System.String CommercialModelCli.CommercialModelApiClient::get_BaseUrl()
+FNDA:6,System.String CommercialModelCli.CommercialModelApiClient::get_BaseUrl()
+DA:36,6
+FN:36,System.Void CommercialModelCli.CommercialModelApiClient::set_BaseUrl(System.String)
+FNDA:3,System.Void CommercialModelCli.CommercialModelApiClient::set_BaseUrl(System.String)
+DA:37,3
+FN:39,Newtonsoft.Json.JsonSerializerSettings CommercialModelCli.CommercialModelApiClient::get_JsonSerializerSettings()
+FNDA:3,Newtonsoft.Json.JsonSerializerSettings CommercialModelCli.CommercialModelApiClient::get_JsonSerializerSettings()
+DA:40,3
+FN:50,System.Threading.Tasks.Task`1<System.Collections.Generic.ICollection`1<CommercialModelCli.Account>> CommercialModelCli.CommercialModelApiClient::AccountsAllAsync()
+FNDA:0,System.Threading.Tasks.Task`1<System.Collections.Generic.ICollection`1<CommercialModelCli.Account>> CommercialModelCli.CommercialModelApiClient::AccountsAllAsync()
+DA:51,0
+DA:52,0
+DA:53,0
+FN:120,System.Threading.Tasks.Task`1<CommercialModelCli.Account> CommercialModelCli.CommercialModelApiClient::AccountsAsync(System.String)
+FNDA:1,System.Threading.Tasks.Task`1<CommercialModelCli.Account> CommercialModelCli.CommercialModelApiClient::AccountsAsync(System.String)
+DA:121,1
+DA:122,1
+DA:123,1
+FN:202,System.Threading.Tasks.Task`1<System.Boolean> CommercialModelCli.CommercialModelApiClient::Accounts2Async()
+FNDA:0,System.Threading.Tasks.Task`1<System.Boolean> CommercialModelCli.CommercialModelApiClient::Accounts2Async()
+DA:203,0
+DA:204,0
+DA:205,0
+FN:272,System.Threading.Tasks.Task`1<CommercialModelCli.Account> CommercialModelCli.CommercialModelApiClient::Accounts3Async(System.String)
+FNDA:0,System.Threading.Tasks.Task`1<CommercialModelCli.Account> CommercialModelCli.CommercialModelApiClient::Accounts3Async(System.String)
+DA:273,0
+DA:274,0
+DA:275,0
+FN:352,System.Boolean CommercialModelCli.CommercialModelApiClient::get_ReadResponseAsString()
+FNDA:1,System.Boolean CommercialModelCli.CommercialModelApiClient::get_ReadResponseAsString()
+DA:353,1
+FN:397,System.String CommercialModelCli.CommercialModelApiClient::ConvertToString(System.Object,System.Globalization.CultureInfo)
+FNDA:1,System.String CommercialModelCli.CommercialModelApiClient::ConvertToString(System.Object,System.Globalization.CultureInfo)
+DA:398,1
+DA:399,1
+DA:400,0
+DA:401,0
+DA:402,0
+DA:403,0
+DA:404,0
+DA:405,0
+DA:406,0
+DA:407,0
+DA:408,0
+DA:409,0
+DA:410,0
+DA:411,0
+DA:413,0
+DA:414,0
+DA:415,0
+DA:416,1
+DA:417,0
+DA:419,1
+DA:420,0
+DA:421,0
+DA:423,1
+DA:424,0
+DA:425,0
+DA:426,0
+DA:429,1
+DA:430,1
+BRDA:399,32,0,0
+BRDA:402,54,0,0
+BRDA:405,88,0,0
+BRDA:409,124,0,0
+BRDA:411,134,0,0
+BRDA:411,134,1,0
+BRDA:409,124,1,0
+BRDA:405,88,1,0
+BRDA:402,54,1,0
+BRDA:399,32,1,1
+BRDA:416,174,0,0
+BRDA:416,174,1,1
+BRDA:419,211,0,0
+BRDA:419,211,1,1
+BRDA:423,230,0,1
+BRDA:423,230,1,0
+BRDA:423,250,0,0
+BRDA:423,250,1,1
+FN:17,System.Void CommercialModelCli.CommercialModelApiClient::.ctor(System.String,System.Net.Http.HttpClient)
+FNDA:1,System.Void CommercialModelCli.CommercialModelApiClient::.ctor(System.String,System.Net.Http.HttpClient)
+DA:18,1
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+DA:26,1
+DA:27,1
+DA:28,1
+DA:29,1
+DA:30,1
+DA:31,2
+DA:32,1
+FN:347,T CommercialModelCli.CommercialModelApiClient/ObjectResponseResult`1::get_Object()
+FNDA:1,T CommercialModelCli.CommercialModelApiClient/ObjectResponseResult`1::get_Object()
+DA:348,1
+FN:349,System.String CommercialModelCli.CommercialModelApiClient/ObjectResponseResult`1::get_Text()
+FNDA:0,System.String CommercialModelCli.CommercialModelApiClient/ObjectResponseResult`1::get_Text()
+DA:350,0
+FN:342,System.Void CommercialModelCli.CommercialModelApiClient/ObjectResponseResult`1::.ctor(T,System.String)
+FNDA:1,System.Void CommercialModelCli.CommercialModelApiClient/ObjectResponseResult`1::.ctor(T,System.String)
+DA:343,1
+DA:344,1
+DA:345,1
+DA:346,1
+FN:79,System.String CommercialModelCli.CommercialModelApiClient/<>c::<AccountsAllAsync>b__14_0(System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>>)
+FNDA:0,System.String CommercialModelCli.CommercialModelApiClient/<>c::<AccountsAllAsync>b__14_0(System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>>)
+DA:80,0
+FN:156,System.String CommercialModelCli.CommercialModelApiClient/<>c::<AccountsAsync>b__16_0(System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>>)
+FNDA:7,System.String CommercialModelCli.CommercialModelApiClient/<>c::<AccountsAsync>b__16_0(System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>>)
+DA:157,7
+FN:231,System.String CommercialModelCli.CommercialModelApiClient/<>c::<Accounts2Async>b__18_0(System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>>)
+FNDA:0,System.String CommercialModelCli.CommercialModelApiClient/<>c::<Accounts2Async>b__18_0(System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>>)
+DA:232,0
+FN:303,System.String CommercialModelCli.CommercialModelApiClient/<>c::<Accounts3Async>b__20_0(System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>>)
+FNDA:0,System.String CommercialModelCli.CommercialModelApiClient/<>c::<Accounts3Async>b__20_0(System.Collections.Generic.KeyValuePair`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>>)
+DA:304,0
+FN:59,System.Void CommercialModelCli.CommercialModelApiClient/<AccountsAllAsync>d__14::MoveNext()
+FNDA:0,System.Void CommercialModelCli.CommercialModelApiClient/<AccountsAllAsync>d__14::MoveNext()
+DA:60,0
+DA:61,0
+DA:62,0
+DA:64,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:73,0
+DA:74,0
+DA:77,0
+DA:79,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:102,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:112,0
+DA:113,0
+DA:114,0
+BRDA:62,44,0,0
+BRDA:62,44,1,0
+BRDA:67,135,0,0
+BRDA:67,135,1,0
+BRDA:81,512,0,0
+BRDA:81,512,1,0
+BRDA:81,540,0,0
+BRDA:83,650,1,0
+BRDA:83,650,0,0
+BRDA:81,540,1,0
+BRDA:90,733,0,0
+BRDA:90,733,1,0
+BRDA:96,928,0,0
+BRDA:96,928,1,0
+BRDA:96,953,0,0
+BRDA:98,970,0,0
+BRDA:98,970,1,0
+BRDA:96,953,1,0
+BRDA:106,1234,0,0
+BRDA:106,1234,1,0
+FN:130,System.Void CommercialModelCli.CommercialModelApiClient/<AccountsAsync>d__16::MoveNext()
+FNDA:1,System.Void CommercialModelCli.CommercialModelApiClient/<AccountsAsync>d__16::MoveNext()
+DA:131,1
+DA:132,1
+DA:133,1
+DA:134,1
+DA:135,1
+DA:136,1
+DA:137,1
+DA:138,1
+DA:140,1
+DA:142,1
+DA:143,1
+DA:144,1
+DA:145,1
+DA:146,1
+DA:147,1
+DA:150,1
+DA:151,1
+DA:154,1
+DA:156,1
+DA:158,1
+DA:159,1
+DA:160,7
+DA:161,2
+DA:162,1
+DA:166,1
+DA:167,1
+DA:168,1
+DA:169,1
+DA:170,1
+DA:173,0
+DA:174,0
+DA:175,0
+DA:176,0
+DA:179,0
+DA:180,0
+DA:181,0
+DA:182,0
+DA:185,0
+DA:188,1
+DA:189,1
+DA:190,1
+DA:191,1
+DA:195,1
+DA:196,1
+DA:197,1
+BRDA:133,47,0,0
+BRDA:133,47,1,1
+BRDA:134,101,0,1
+BRDA:134,101,1,1
+BRDA:143,249,0,1
+BRDA:143,249,1,1
+BRDA:154,547,0,1
+BRDA:158,677,0,1
+BRDA:158,677,1,0
+BRDA:158,705,0,1
+BRDA:160,815,1,2
+BRDA:160,815,0,1
+BRDA:158,705,1,1
+BRDA:167,897,0,1
+BRDA:154,547,1,0
+BRDA:167,897,1,0
+BRDA:173,1096,0,0
+BRDA:154,547,2,0
+BRDA:173,1096,1,0
+BRDA:179,1325,0,0
+BRDA:179,1325,1,0
+BRDA:179,1350,0,0
+BRDA:181,1367,0,0
+BRDA:181,1367,1,0
+BRDA:154,547,3,0
+BRDA:179,1350,1,0
+BRDA:189,1630,0,1
+BRDA:189,1630,1,1
+FN:211,System.Void CommercialModelCli.CommercialModelApiClient/<Accounts2Async>d__18::MoveNext()
+FNDA:0,System.Void CommercialModelCli.CommercialModelApiClient/<Accounts2Async>d__18::MoveNext()
+DA:212,0
+DA:213,0
+DA:214,0
+DA:216,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:225,0
+DA:226,0
+DA:229,0
+DA:231,0
+DA:233,0
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:241,0
+DA:242,0
+DA:243,0
+DA:244,0
+DA:245,0
+DA:248,0
+DA:249,0
+DA:250,0
+DA:251,0
+DA:254,0
+DA:257,0
+DA:258,0
+DA:259,0
+DA:260,0
+DA:264,0
+DA:265,0
+DA:266,0
+BRDA:214,44,0,0
+BRDA:214,44,1,0
+BRDA:219,135,0,0
+BRDA:219,135,1,0
+BRDA:233,512,0,0
+BRDA:233,512,1,0
+BRDA:233,540,0,0
+BRDA:235,650,1,0
+BRDA:235,650,0,0
+BRDA:233,540,1,0
+BRDA:242,733,0,0
+BRDA:242,733,1,0
+BRDA:248,928,0,0
+BRDA:248,928,1,0
+BRDA:248,953,0,0
+BRDA:250,970,0,0
+BRDA:250,970,1,0
+BRDA:248,953,1,0
+BRDA:258,1234,0,0
+BRDA:258,1234,1,0
+FN:282,System.Void CommercialModelCli.CommercialModelApiClient/<Accounts3Async>d__20::MoveNext()
+FNDA:0,System.Void CommercialModelCli.CommercialModelApiClient/<Accounts3Async>d__20::MoveNext()
+DA:283,0
+DA:284,0
+DA:285,0
+DA:286,0
+DA:288,0
+DA:290,0
+DA:291,0
+DA:292,0
+DA:293,0
+DA:294,0
+DA:297,0
+DA:298,0
+DA:301,0
+DA:303,0
+DA:305,0
+DA:306,0
+DA:307,0
+DA:308,0
+DA:309,0
+DA:313,0
+DA:314,0
+DA:315,0
+DA:316,0
+DA:317,0
+DA:320,0
+DA:321,0
+DA:322,0
+DA:323,0
+DA:326,0
+DA:329,0
+DA:330,0
+DA:331,0
+DA:332,0
+DA:336,0
+DA:337,0
+DA:338,0
+BRDA:285,47,0,0
+BRDA:285,47,1,0
+BRDA:291,182,0,0
+BRDA:291,182,1,0
+BRDA:305,559,0,0
+BRDA:305,559,1,0
+BRDA:305,587,0,0
+BRDA:307,697,1,0
+BRDA:307,697,0,0
+BRDA:305,587,1,0
+BRDA:314,780,0,0
+BRDA:314,780,1,0
+BRDA:320,975,0,0
+BRDA:320,975,1,0
+BRDA:320,1000,0,0
+BRDA:322,1017,0,0
+BRDA:322,1017,1,0
+BRDA:320,1000,1,0
+BRDA:330,1281,0,0
+BRDA:330,1281,1,0
+FN:355,System.Void CommercialModelCli.CommercialModelApiClient/<ReadObjectResponseAsync>d__26`1::MoveNext()
+FNDA:1,System.Void CommercialModelCli.CommercialModelApiClient/<ReadObjectResponseAsync>d__26`1::MoveNext()
+DA:356,1
+DA:357,1
+DA:358,0
+DA:359,0
+DA:362,1
+DA:363,0
+DA:364,0
+DA:366,0
+DA:367,0
+DA:368,0
+DA:370,0
+DA:371,0
+DA:372,0
+DA:373,0
+DA:377,1
+DA:379,1
+DA:380,1
+DA:381,1
+DA:382,1
+DA:383,1
+DA:384,1
+DA:385,1
+DA:386,1
+DA:389,0
+DA:390,0
+DA:391,0
+DA:392,0
+DA:395,1
+BRDA:357,35,0,1
+BRDA:357,35,1,0
+BRDA:357,56,0,0
+BRDA:357,56,1,1
+BRDA:362,99,0,0
+BRDA:362,99,1,1
+FN:436,System.String CommercialModelCli.Account::get_AccountShortName()
+FNDA:2,System.String CommercialModelCli.Account::get_AccountShortName()
+DA:437,2
+FN:445,System.String CommercialModelCli.ProblemDetails::get_Type()
+FNDA:0,System.String CommercialModelCli.ProblemDetails::get_Type()
+DA:446,0
+FN:448,System.String CommercialModelCli.ProblemDetails::get_Title()
+FNDA:0,System.String CommercialModelCli.ProblemDetails::get_Title()
+DA:449,0
+FN:451,System.Nullable`1<System.Int32> CommercialModelCli.ProblemDetails::get_Status()
+FNDA:0,System.Nullable`1<System.Int32> CommercialModelCli.ProblemDetails::get_Status()
+DA:452,0
+FN:454,System.String CommercialModelCli.ProblemDetails::get_Detail()
+FNDA:0,System.String CommercialModelCli.ProblemDetails::get_Detail()
+DA:455,0
+FN:457,System.String CommercialModelCli.ProblemDetails::get_Instance()
+FNDA:0,System.String CommercialModelCli.ProblemDetails::get_Instance()
+DA:458,0
+FN:464,System.Collections.Generic.IDictionary`2<System.String,System.Object> CommercialModelCli.ProblemDetails::get_AdditionalProperties()
+FNDA:0,System.Collections.Generic.IDictionary`2<System.String,System.Object> CommercialModelCli.ProblemDetails::get_AdditionalProperties()
+DA:465,0
+FN:465,System.Void CommercialModelCli.ProblemDetails::set_AdditionalProperties(System.Collections.Generic.IDictionary`2<System.String,System.Object>)
+FNDA:0,System.Void CommercialModelCli.ProblemDetails::set_AdditionalProperties(System.Collections.Generic.IDictionary`2<System.String,System.Object>)
+DA:466,0
+FN:459,System.Void CommercialModelCli.ProblemDetails::.ctor()
+FNDA:0,System.Void CommercialModelCli.ProblemDetails::.ctor()
+DA:460,0
+FN:474,System.Int32 CommercialModelCli.ApiException::get_StatusCode()
+FNDA:0,System.Int32 CommercialModelCli.ApiException::get_StatusCode()
+DA:475,0
+FN:476,System.String CommercialModelCli.ApiException::get_Response()
+FNDA:0,System.String CommercialModelCli.ApiException::get_Response()
+DA:477,0
+FN:478,System.Collections.Generic.IReadOnlyDictionary`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>> CommercialModelCli.ApiException::get_Headers()
+FNDA:0,System.Collections.Generic.IReadOnlyDictionary`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>> CommercialModelCli.ApiException::get_Headers()
+DA:479,0
+FN:489,System.String CommercialModelCli.ApiException::ToString()
+FNDA:0,System.String CommercialModelCli.ApiException::ToString()
+DA:490,0
+DA:491,0
+DA:492,0
+FN:481,System.Void CommercialModelCli.ApiException::.ctor(System.String,System.Int32,System.String,System.Collections.Generic.IReadOnlyDictionary`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>>,System.Exception)
+FNDA:0,System.Void CommercialModelCli.ApiException::.ctor(System.String,System.Int32,System.String,System.Collections.Generic.IReadOnlyDictionary`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>>,System.Exception)
+DA:482,0
+DA:483,0
+DA:484,0
+DA:485,0
+DA:486,0
+DA:487,0
+BRDA:482,52,0,0
+BRDA:482,52,1,0
+FN:497,TResult CommercialModelCli.ApiException`1::get_Result()
+FNDA:0,TResult CommercialModelCli.ApiException`1::get_Result()
+DA:498,0
+FN:500,System.Void CommercialModelCli.ApiException`1::.ctor(System.String,System.Int32,System.String,System.Collections.Generic.IReadOnlyDictionary`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>>,TResult,System.Exception)
+FNDA:0,System.Void CommercialModelCli.ApiException`1::.ctor(System.String,System.Int32,System.String,System.Collections.Generic.IReadOnlyDictionary`2<System.String,System.Collections.Generic.IEnumerable`1<System.String>>,TResult,System.Exception)
+DA:501,0
+DA:502,0
+DA:503,0
+DA:504,0
+LF:271
+LH:82
+BRF:114
+BRH:22
+FNF:38
+FNH:13
+end_of_record

@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 
 namespace CommercialModelCli
 {
+    /// <summary>
+    /// Thin adapter to the auto generated class to make the functions more descriptive and add the
+    /// option to move to another way of implementing the interface.
+    /// </summary>
     public class Client
     {
         private readonly CommercialModelApiClient _client;

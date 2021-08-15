@@ -60,7 +60,7 @@ namespace CommercialModelApi.Tests
             Assert.True(result.Result is BadRequestObjectResult);
             var badRequestResult = (BadRequestObjectResult)result.Result;
             var problemDetails = (ProblemDetails)badRequestResult.Value;
-            Assert.Equal(problemDetails.Detail, "Account already exists");
+            Assert.Equal("Account already exists", problemDetails.Detail);
         }
 
         [Fact]

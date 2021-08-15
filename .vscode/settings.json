@@ -1,5 +1,5 @@
 {
-    "dotnet-test-explorer.testProjectPath": "**/*Tests.csproj",
+    "dotnet-test-explorer.testProjectPath": "{**/*Tests.csproj,**/*Pact.csproj}",
     "coverage-gutters.lcovname": "coverage.info",
     "coverage-gutters.coverageBaseDir": "coverage/**"
 }
