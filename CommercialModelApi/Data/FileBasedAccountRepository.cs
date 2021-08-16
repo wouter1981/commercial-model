@@ -5,7 +5,7 @@ using CommercialModelApi.Model;
 
 namespace CommercialModelApi.Data
 {
-    internal class FileBasedAccountRepository : IAccountRepository
+    public class FileBasedAccountRepository : IAccountRepository
     {
         private readonly static string _baseFolder =
                 Path.Combine(

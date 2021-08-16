@@ -45,7 +45,7 @@ namespace CommercialModelCli.Pact
                    new ProviderServiceResponse
                    {
                        Headers = new Dictionary<string, object> {
-                            { "Content-Type", "text/plain; charset=utf-8" }
+                            { "Content-Type", "application/json; charset=utf-8" }
                         },
                        Status = 201,
                        Body = new

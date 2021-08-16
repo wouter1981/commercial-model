@@ -33,11 +33,12 @@ namespace CommercialModelApi
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { 
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
                     Title = "CommercialModel Api",
                     Version = "v1",
                     Description = "This API is used to manage the commercial model.",
-                    Contact = new OpenApiContact {Name = "Wouter Simons"},
+                    Contact = new OpenApiContact { Name = "Wouter Simons" },
                 });
 
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -47,7 +48,7 @@ namespace CommercialModelApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public virtual void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
